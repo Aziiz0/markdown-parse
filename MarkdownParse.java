@@ -11,8 +11,12 @@ public class MarkdownParse {
         // the next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
+            //int opBrackets = 0;
+
             int nextOpenBracket = markdown.indexOf("[", currentIndex);
             if (nextOpenBracket == -1) break;
+            
+
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             if (nextCloseBracket == -1) break;
             int openParen = markdown.indexOf("(", nextCloseBracket);
@@ -32,7 +36,7 @@ public class MarkdownParse {
         return toReturn;
     }
     public static void main(String[] args) throws IOException {
-		Path fileName = Path.of("test-file.md");//Path.of(args[0]);
+		Path fileName = Path.of(args[0]);
 	    String contents = Files.readString(fileName);
         ArrayList<String> links = getLinks(contents);
         System.out.println(links);
