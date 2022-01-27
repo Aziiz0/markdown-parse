@@ -25,7 +25,7 @@ public class MarkdownParse {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
             
-            System.out.println(currentIndex);
+            //System.out.println(currentIndex);
 
             //System.out.println(markdown.length());
         }
