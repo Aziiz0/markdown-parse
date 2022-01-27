@@ -8,5 +8,6 @@ another [text
 test
 [testing] (test.com)
 
-[error (testing)
+[error] (testing)
 null
+[Link]((google.com))
