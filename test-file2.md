@@ -3,5 +3,5 @@
 [a link!](https://something.com)
 [another link!](some-page.html)
 
-[[link]](google.com)
+[link](google.com)
 plain
