@@ -20,6 +20,10 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", nextCloseBracket);
             if (openParen == -1) break;
 
+            if (markdown.charAt(openParen-1) == ']') {
+                nextCloseBracket = openParen-1;
+            }
+
             int closeParen = markdown.indexOf(")", openParen);
             if (closeParen == -1) break;
 
