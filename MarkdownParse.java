@@ -11,27 +11,12 @@ public class MarkdownParse {
         // the next )
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
-            //int opBrackets = 0;
-
             int nextOpenBracket = markdown.indexOf("[", currentIndex);
-            if (nextOpenBracket == -1) break;
-            
-
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
-            if (nextCloseBracket == -1) break;
             int openParen = markdown.indexOf("(", nextCloseBracket);
-            if (openParen == -1) break;
             int closeParen = markdown.indexOf(")", openParen);
-            if (closeParen == -1) break;
-            
-            currentIndex = closeParen+1;
-            if (openParen-nextCloseBracket == 1) {
-                toReturn.add(markdown.substring(openParen + 1, closeParen));
-            }
-            
-            //System.out.println(currentIndex);
-
-            //System.out.println(markdown.length());
+            toReturn.add(markdown.substring(openParen + 1, closeParen));
+            currentIndex = closeParen + 1;
         }
         return toReturn;
     }
@@ -41,4 +26,4 @@ public class MarkdownParse {
         ArrayList<String> links = getLinks(contents);
         System.out.println(links);
     }
-}
+} 
