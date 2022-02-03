@@ -55,7 +55,7 @@ public class MarkdownParseTest {
 
     @Test
 	public void testFile5() throws IOException{
-        ArrayList<String> result = MarkdownParse.getLinks(Files.readString(Path.of("test-file4.md")));
+        ArrayList<String> result = MarkdownParse.getLinks(Files.readString(Path.of("test-file5.md")));
         List<String> newList = new ArrayList<String>();
         newList.add("https://something.com");
         newList.add("some-page.html");
