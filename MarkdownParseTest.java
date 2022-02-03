@@ -16,8 +16,7 @@ public class MarkdownParseTest {
         List<String> newList = new ArrayList<String>();
         newList.add("https://something.com");
         newList.add("some-page.html");
-        newList.add("youtube.com");
-        newList.add("(google.com");
+        newList.add("google.com");
 
         assertEquals(newList, result);
 	}
@@ -28,7 +27,6 @@ public class MarkdownParseTest {
         List<String> newList = new ArrayList<String>();
         newList.add("https://something.com");
         newList.add("some-page.html");
-        newList.add("google.com");
 
         assertEquals(newList, result);
 	}
@@ -39,7 +37,7 @@ public class MarkdownParseTest {
         List<String> newList = new ArrayList<String>();
         newList.add("https://something.com");
         newList.add("some-page.html");
-        newList.add("(google.com)");
+        newList.add("google.com");
 
         assertEquals(newList, result);
 	}
@@ -50,6 +48,7 @@ public class MarkdownParseTest {
         List<String> newList = new ArrayList<String>();
         newList.add("https://something.com");
         newList.add("some-page.html");
+        newList.add("(test.com)");
 
         assertEquals(newList, result);
 	}
