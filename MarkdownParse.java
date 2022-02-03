@@ -27,6 +27,10 @@ public class MarkdownParse {
             int closeParen = markdown.indexOf(")", openParen);
             if (closeParen == -1) break;
 
+            if (markdown.charAt(closeParen++) == ')') {
+                closeParen = closeParen + 1;
+            }
+
             if (openParen-nextCloseBracket == 1) {
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
