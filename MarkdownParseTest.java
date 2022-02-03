@@ -61,6 +61,6 @@ public class MarkdownParseTest {
         newList.add("some-page.html");
         newList.add("www.name.com");
 
-        assertEquals(newList, result);*/
-	}
+        assertEquals(newList, result);
+	}*/
 }
