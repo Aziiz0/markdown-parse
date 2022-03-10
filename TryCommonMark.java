@@ -33,3 +33,9 @@ class WordCountVisitor extends AbstractVisitor {
         visitChildren(text);
     }
 }
+
+class LinkVistor extends AbstracVisitor {
+    public void visit(Link link) {
+        
+    }
+}
